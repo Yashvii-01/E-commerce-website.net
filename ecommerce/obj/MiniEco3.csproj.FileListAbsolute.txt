@@ -1,0 +1,2 @@
+C:\Users\Admin\Downloads\MiniEco3\MiniEco3\MiniEco3\obj\x86\Debug\MiniEco3.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\MiniEco3\MiniEco3\MiniEco3\obj\x86\Debug\MiniEco3.csproj.CoreCompileInputs.cache
