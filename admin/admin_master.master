@@ -1,0 +1,88 @@
+﻿<%@ Master Language="VB" CodeFile="admin_master.master.vb" Inherits="admin_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Assests/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+            
+            width:100%;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #343a40;
+            color: #fff;
+            flex-shrink: 0;
+        }
+        .sidebar a {
+            color: #ddd;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+        }
+        .sidebar a:hover {
+            background-color: #495057;
+            color: #fff;
+        }
+        .content {
+            flex-grow: 1;
+            background-color: #f8f9fa;
+            padding: 20px;
+            
+        }
+        .card
+        {
+           width:100%; 
+           }
+    </style>
+    <div class="wrapper">
+    <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="p-3 text-center border-bottom">
+
+                    <img src="../Assests/Images/co.png" class="img-fluid mb-2" style="max-height:80px;">
+                    <h5>Admin Panel</h5>
+                </div>
+                <nav>
+                    <!--<a href="Dashboard.aspx">🏠 Dashboard</a>-->
+                    <a href="Addprod.aspx">📦 Manage Products</a>
+                    <a href="orders.aspx">🛒 View Orders</a>
+                    <a href="users.aspx">👤 Manage Users</a>
+                    <asp:Button ID="btnlogout" class="bg-transparent border-0 text-white px-3 py-2" runat="server" Text=" 🚪LogOut"></asp:Button>
+                    
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="content">
+                <nav class="navbar navbar-light bg-light border-bottom">
+                    <button class="btn btn-outline-secondary" id="menu-toggle">☰</button>
+                    <span class="navbar-brand">Mini E-Commerce</span>
+                </nav>
+
+                <!-- Where content pages load -->
+                <div class="p-4">
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+    </div>
+    </form>
+</body>
+</html>
